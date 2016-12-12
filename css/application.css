@@ -2,6 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url("https://fonts.googleapis.com/css?family=Anton|Nunito:300,400,700");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -46,50 +47,152 @@ table {
   border-spacing: 0; }
 
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  transition: all ease-in-out 250ms; }
 
-nav ul {
+.logo .logo-content, nav .nav-content, .slideshow .slideshow-content, .featured {
   max-width: 1180px; }
+
+body {
+  background-color: #F0F0F0;
+  font-family: 'Nunito', sans-serif; }
+
+.logo {
+  background: #222222; }
+  .logo .logo-content {
+    margin: 0 auto;
+    color: #949494;
+    display: flex;
+    background-color: #222222;
+    justify-content: space-between; }
+    .logo .logo-content .green {
+      color: #7de8ad; }
+    .logo .logo-content h1 {
+      color: white;
+      margin: 25px 0;
+      font-size: 1.8em;
+      font-family: 'Anton', sans-serif; }
+      .logo .logo-content h1:hover {
+        color: #7de8ad;
+        cursor: pointer; }
+    .logo .logo-content .icons {
+      margin: 25px 0;
+      width: 80px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.5em; }
+      .logo .logo-content .icons i:hover {
+        color: #7de8ad;
+        cursor: pointer; }
 
 nav {
   height: 59px;
-  display: flex;
-  background: #222222;
-  align-items: center;
-  padding: 0 10%; }
-  nav ul {
-    background-color: grey;
+  background: #222222; }
+  nav .nav-content {
+    margin: 0 auto;
     display: flex;
-    justify-content: flex-start; }
-    nav ul li {
-      list-style: none;
-      margin-right: 2vw; }
-      nav ul li a {
-        color: #949494;
-        text-decoration: none;
-        font-family: sans-serif;
-        text-transform: uppercase;
-        font-size: 0.8em;
-        transition: all ease-in 250ms; }
-        nav ul li a:hover {
-          color: white; }
+    height: 100%; }
+    nav .nav-content ul {
+      align-self: center;
+      display: flex;
+      justify-content: flex-start; }
+      nav .nav-content ul li {
+        list-style: none;
+        margin-right: 2vw; }
+        nav .nav-content ul li a {
+          color: #949494;
+          text-decoration: none;
+          text-transform: uppercase;
+          font-size: 0.8em; }
+          nav .nav-content ul li a:hover {
+            color: white; }
 
 .slideshow {
-  background-color: purple;
-  position: relative; }
+  background-color: purple; }
   .slideshow img {
     display: block;
     width: 100%;
     height: 600px;
-    object-fit: cover; }
-  .slideshow .slideshow-caption {
-    margin: 0 10%;
-    padding: 10px;
-    position: absolute;
-    bottom: 100px;
-    left: 0; }
-    .slideshow .slideshow-caption h1 {
-      font-size: 2em;
-      background-color: #7de8ad; }
+    object-fit: cover;
+    filter: grayscale(0.7); }
+  .slideshow .slideshow-content {
+    margin: 0 auto;
+    display: flex;
+    height: 100%;
+    position: relative; }
+    .slideshow .slideshow-content .slideshow-caption {
+      padding: 10px;
+      position: absolute;
+      bottom: 100px;
+      left: 0; }
+      .slideshow .slideshow-content .slideshow-caption h1 {
+        font-size: 2.5em;
+        padding: 25px 10px;
+        background-color: #7de8ad;
+        text-transform: uppercase;
+        letter-spacing: -2px;
+        color: #222222; }
+        .slideshow .slideshow-content .slideshow-caption h1:hover {
+          background: #1fad5f;
+          cursor: pointer; }
+      .slideshow .slideshow-content .slideshow-caption .sub-tag {
+        margin-top: -8px; }
+      .slideshow .slideshow-content .slideshow-caption h3 {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 20px;
+        background: #222222;
+        height: 40px;
+        color: white; }
+        .slideshow .slideshow-content .slideshow-caption h3:hover {
+          background: #555555;
+          cursor: pointer; }
+      .slideshow .slideshow-content .slideshow-caption i {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        width: 40px;
+        height: 40px;
+        background: #222222; }
+        .slideshow .slideshow-content .slideshow-caption i:hover {
+          background: #555555;
+          cursor: pointer; }
+
+.featured {
+  background-color: #F0F0F0;
+  top: -50px;
+  position: relative;
+  z-index: 20;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  .featured .item {
+    margin: 1px;
+    padding: 20px;
+    background-color: white;
+    flex: 1;
+    text-align: center; }
+    .featured .item:hover {
+      background-color: #F0F0F0;
+      cursor: pointer; }
+      .featured .item:hover > h5 {
+        color: #1fad5f; }
+  .featured img {
+    max-width: 300px;
+    margin: 25px; }
+  .featured h2 {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.5em; }
+  .featured h5 {
+    text-transform: uppercase;
+    margin-top: 5px;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: #7de8ad; }
 
 /*# sourceMappingURL=application.css.map */
