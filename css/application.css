@@ -289,4 +289,18 @@ nav {
     color: red;
     font-weight: bold; }
 
+@media screen and (max-width: 1180px) {
+  .logo {
+    padding: 0 10px;
+    height: 59px; }
+    .logo .logo-content {
+      padding-top: 12px; }
+      .logo .logo-content h1 {
+        margin: 0; }
+      .logo .logo-content .icons {
+        margin: 0; }
+
+  nav {
+    display: none; } }
+
 /*# sourceMappingURL=application.css.map */
