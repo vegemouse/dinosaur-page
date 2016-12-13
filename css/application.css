@@ -46,7 +46,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-* {
+*, *:after {
   box-sizing: border-box;
   transition: all ease-in-out 250ms; }
 
@@ -195,39 +195,98 @@ nav {
     font-weight: bold;
     color: #7de8ad; }
 
+.carnivores .dino:first-child:hover:after {
+  filter: grayscale(1) brightness(0.3); }
+.carnivores .dino:first-child:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  filter: grayscale(1) brightness(0.6);
+  background: url("../img/carnivore.jpg");
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%; }
+
+.herbivores .dino:first-child:hover:after {
+  filter: grayscale(1) brightness(0.3); }
+.herbivores .dino:first-child:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  filter: grayscale(1) brightness(0.6);
+  background: url("../img/herbivore.jpg");
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%; }
+
 .carnivores, .herbivores {
-  background: #F0F0F0;
-  margin: 0 auto;
+  background-color: #F0F0F0;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 40px;
   display: flex;
-  justify-content: space-between;
-  height: 300px; }
+  flex-wrap: wrap;
+  justify-content: space-between; }
   .carnivores .dino, .herbivores .dino {
-    background: white;
+    position: relative;
+    min-width: 200px;
+    min-height: 200px;
     margin: 1px;
-    height: 300px;
-    flex: 1; }
+    background-color: white;
+    flex: 1;
+    text-align: center; }
+    .carnivores .dino:hover, .herbivores .dino:hover {
+      background-color: #F0F0F0;
+      cursor: pointer; }
+      .carnivores .dino:hover > h5, .herbivores .dino:hover > h5 {
+        color: #1fad5f; }
+      .carnivores .dino:hover > .view, .herbivores .dino:hover > .view {
+        opacity: 1;
+        top: 50%; }
+    .carnivores .dino .view, .herbivores .dino .view {
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-decoration: none;
+      background: #7de8ad;
+      color: white;
+      padding: 10px 15px;
+      opacity: 0; }
     .carnivores .dino:first-child, .herbivores .dino:first-child {
-      position: relative;
-      text-transform: uppercase; }
-      .carnivores .dino:first-child img, .herbivores .dino:first-child img {
-        filter: grayscale(1) brightness(0.6);
-        width: 100%;
-        height: 100%;
-        object-fit: cover; }
+      position: relative; }
       .carnivores .dino:first-child h2, .herbivores .dino:first-child h2 {
         position: absolute;
         bottom: 60px;
         padding: 10px 15px;
         font-size: 1.6em;
         background: #7de8ad;
-        color: white; }
+        color: white;
+        z-index: 2; }
       .carnivores .dino:first-child h5, .herbivores .dino:first-child h5 {
         position: absolute;
         font-size: .8em;
         color: white;
         position: absolute;
         bottom: 30px;
-        padding: 10px 20px; }
+        padding: 10px 20px;
+        z-index: 2; }
+  .carnivores img, .herbivores img {
+    max-width: 200px; }
+  .carnivores h4, .herbivores h4 {
+    font-weight: bold; }
+  .carnivores p, .herbivores p {
+    padding: 10px; }
+  .carnivores .sold-out, .herbivores .sold-out {
+    color: red;
+    font-weight: bold; }
 
 /*# sourceMappingURL=application.css.map */
