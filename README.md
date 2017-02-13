@@ -1,4 +1,4 @@
-# Crater Lake
+# DinoEggs
 ### Created by _Maxwell Cady_ and _Erica Nafziger_
 #### A responsive landing page for a fake "DinoEgg" company.
 
